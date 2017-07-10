@@ -1,6 +1,7 @@
 angular.module('bidding', [ 
   'bidding.controllers',
-  'ngRoute'
+  'ngRoute',
+  'angular.filter'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.

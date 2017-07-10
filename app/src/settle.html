@@ -1,27 +1,55 @@
-<div class="container" >
-    <div class="settleData" >
-       
+<div class="container">
+    <div class="settleData">
+
         <button ng-click="readSettledCsv()">
 Display Settled data
 </button>
 
         <div id="divID">
             <table>
-                <tr ng-repeat="settle in settledDatas track by $index">
-                    <td ng-repeat="settleData in settle track by $index">{{ settleData }}</td>
+                <tr>
+                    <th>Customer</th>
+                    <th>Event</th>
+                    <th>Participant</th>
+                    <th>Stake</th>
+                    <th>Win</th>
                 </tr>
+                <tbody ng-repeat="customerData in settledData  track by $index">
+                    <tr ng-class="{'green' : settle.unUsualWin}" ng-repeat="settle in customerData  track by $index">
+                        <td>{{settle.Customer}}</td>
+                        <td>{{settle.Event}}</td>
+                        <td>{{settle.Participant}}</td>
+                        <td>{{settle.Stake}}</td>
+                        <td>{{settle.Win}}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
     <div class="unsettleData">
+
         <button ng-click="readUnSettledCsv()">
 Display Un Settled data
 </button>
+
         <div id="divID">
             <table>
-                <tr ng-repeat="unsettle in unSettledDatas track by $index">
-                    <td ng-repeat="unsettleData in unsettle track by $index">{{ unsettleData }}</td>
+                <tr>
+                    <th>Customer</th>
+                    <th>Event</th>
+                    <th>Participant</th>
+                    <th>Stake</th>
+                    <th>To Win</th>
                 </tr>
+                <tbody ng-repeat="customerData in unsettledData  track by $index">
+                    <tr ng-class="{'green' : settle.unUsualWin, 'yellow' : settle.highUsualWin, 'red' : settle.riskUsualWin}" ng-repeat="settle in customerData  track by $index">
+                        <td>{{settle.Customer}}</td>
+                        <td>{{settle.Event}}</td>
+                        <td>{{settle.Participant}}</td>
+                        <td>{{settle.Stake}}</td>
+                        <td>{{settle.Win}}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

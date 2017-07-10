@@ -26,4 +26,12 @@
         margin: 10px;
     }
     
-   
+   tr.green{
+       background: green !important;
+   }
+   table tr.yellow{
+       background: yellow;
+   }
+   table tr.red{
+       background: red;
+   }
