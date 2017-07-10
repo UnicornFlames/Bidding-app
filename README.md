@@ -6,6 +6,9 @@ All you need to do is to clone this repository,
 
 
 ```
+git clone 
+
+https://github.com/UnicornFlames/Bidding-app.git
 
 ```
 
