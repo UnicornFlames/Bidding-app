@@ -1,6 +1,6 @@
 <div class="container">
     <div class="settleData">
-
+        <p>green color indicates A customer wins on more than 60% of their bets </p>
         <button ng-click="readSettledCsv()">
 Display Settled data
 </button>
@@ -26,8 +26,14 @@ Display Settled data
             </table>
         </div>
     </div>
-    <div class="unsettleData">
 
+    <div class="unsettleData">
+        <p> green color indicates All upcoming (i.e. unsettled) bets from customers that win at an unusual rate should be highlighted
+            as risky</p>
+        <p>yellow color indicate Bets where the stake is more than 10 times higher than that customer’s average bet in their
+            betting history should be highlighted as unusual</p>
+        <p>Bets where the stake is more than 30 times higher than that customer’s average bet in their betting history should
+            be highlighted as highly unusual</p>
         <button ng-click="readUnSettledCsv()">
 Display Un Settled data
 </button>
@@ -47,7 +53,7 @@ Display Un Settled data
                         <td>{{settle.Event}}</td>
                         <td>{{settle.Participant}}</td>
                         <td>{{settle.Stake}}</td>
-                        <td>{{settle.Win}}</td>
+                        <td>{{settle.ToWin}}</td>
                     </tr>
                 </tbody>
             </table>
