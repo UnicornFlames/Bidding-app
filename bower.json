@@ -1,0 +1,14 @@
+{
+  "name": "bidding-risk-application",
+  "description": "A bidding risk application",
+  "version": "0.0.0", 
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-route": "1.4.x",
+    "angular-loader": "1.4.x",
+    "angular-mocks": "~1.4.x",
+    "html5-boilerplate": "~4.3.0"
+  }
+}

@@ -1,0 +1,28 @@
+<div class="container" >
+    <div class="settleData" >
+       
+        <button ng-click="readSettledCsv()">
+Display Settled data
+</button>
+
+        <div id="divID">
+            <table>
+                <tr ng-repeat="settle in settledDatas track by $index">
+                    <td ng-repeat="settleData in settle track by $index">{{ settleData }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="unsettleData">
+        <button ng-click="readUnSettledCsv()">
+Display Un Settled data
+</button>
+        <div id="divID">
+            <table>
+                <tr ng-repeat="unsettle in unSettledDatas track by $index">
+                    <td ng-repeat="unsettleData in unsettle track by $index">{{ unsettleData }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

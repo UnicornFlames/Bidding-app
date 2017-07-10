@@ -1,0 +1,29 @@
+ .container {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .settleData {
+        display: inline-block;
+        width: 45%;
+    }
+    
+    .unsettleData {
+        display: inline-block;
+        width: 45% ;
+    }
+
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+    
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+    }
+    
+   
